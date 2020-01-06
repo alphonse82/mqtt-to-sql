@@ -2,7 +2,7 @@ Topics naming rules for IOT at OB-IOT's .
 
 <database name> / metrics|command|state / place / type of value / identification / unit of the value
 
-example :
+Examples :
 
 OB-IOT/metrics/mgsty/test/random1/int
 
@@ -41,7 +41,7 @@ OB-IOT/state/mgsty/light/chambre-1-1/percent   # for variable light
 * First word in uppercase is the database name
 * Second word is table name, if storing is required
 * Third word is column "location"
-* Fourth word is column "type" - if first char is "_" then infrequent update - write DB only if value changes.
+* Fourth word is column "type"
 * Fifth word is colum "ref"
 * Sexth word is column "unit"
 * The value itself is numeric and is column "value"
