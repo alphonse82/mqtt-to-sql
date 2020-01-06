@@ -1,0 +1,16 @@
+# Parameters for MQTT to SQL
+
+[MQTT]
+broker = WWWWWWWW
+port = 1883
+user = XXXXXXXXXX
+password = YYYYYYYYYY
+clientname = OB-IOT-MQTT-SQL
+maxval = 100
+topic = ZZZZZZZ
+
+[PSQL]
+host = TTTTTTTTT
+user = UUUUUUUUU
+password = VVVVVVVVV
+

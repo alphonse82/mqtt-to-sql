@@ -1,0 +1,48 @@
+Topics naming rules for IOT at OB-IOT's .
+
+<database name> / metrics|command|state / place / type of value / identification / unit of the value
+
+example :
+
+OB-IOT/metrics/mgsty/test/random1/int
+
+OB-IOT/metrics/mgsty/voltage/phase1/volt
+OB-IOT/metrics/mgsty/voltage/phase2/volt
+OB-IOT/metrics/mgsty/voltage/phase3/volt
+
+OB-IOT/metrics/mgsty/current/phase1/amp
+OB-IOT/metrics/mgsty/current/phase2/amp
+OB-IOT/metrics/mgsty/current/phase3/amp
+
+OB-IOT/metrics/mgsty/power/phase1/watt
+OB-IOT/metrics/mgsty/power/phase2/watt
+OB-IOT/metrics/mgsty/power/phase3/watt
+
+OB-IOT/metrics/mgsty/energy/linky/wh
+
+OB-IOT/metrics/mgsty/light/ext-grange/lux
+OB-IOT/metrics/mgsty/temp/ext-grange/degre
+OB-IOT/metrics/mgsty/pressure/ext-grange/hPa
+OB-IOT/metrics/mgsty/humidity/ext-grange/percent
+
+OB-IOT/metrics/mgsty/adsl/up-attenuation/db
+OB-IOT/metrics/mgsty/adsl/dn-attenuation/db
+OB-IOT/metrics/mgsty/adsl/up-synchro/kbps
+OB-IOT/metrics/mgsty/adsl/dn-synchro/kbps
+
+OB-IOT/metrics/mgsty/sat/19.2E-power/dbm
+OB-IOT/metrics/mgsty/sat/19.2E-signal/percent
+OB-IOT/metrics/mgsty/sat/5W-power/dbm
+OB-IOT/metrics/mgsty/sat/5W-signal/percent
+
+OB-IOT/command/mgsty/light/chambre-1-1/percent # for variable light
+OB-IOT/state/mgsty/light/chambre-1-1/percent   # for variable light
+
+* First word in uppercase is the database name
+* Second word is table name, if storing is required
+* Third word is column "location"
+* Fourth word is column "type" - if first char is "_" then infrequent update - write DB only if value changes.
+* Fifth word is colum "ref"
+* Sexth word is column "unit"
+* The value itself is numeric and is column "value"
+

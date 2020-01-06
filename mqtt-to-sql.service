@@ -1,0 +1,8 @@
+[Unit]
+Description=mqtt-to-sql
+
+[Service]
+ExecStart=/usr/local/bin/mqtt-to-sql.py
+
+[Install]
+WantedBy=multi-user.target
