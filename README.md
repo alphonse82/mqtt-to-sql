@@ -53,4 +53,12 @@ CREATE TABLE infos (
 );
 SELECT create_hypertable('infos', 'time');
 ```
+## Usage
 
+The script subscribes to the MQTT topic header specified in the config file.
+This topic shall also be the name of the database.
+
+Then, each message received splits the topic in words (described in the file MQTT_Naming_Rules.txt). 
+These words together defines a "sensor" , which is added to a sensorref table with a unique "sensorid". This may be used for labeling graphs, ...
+The values are then updated to the database table (specified in the first word of the topic, currently "metrics") with a timestamp.
+There is a cache , so value that do not change are not updated to the database. 
