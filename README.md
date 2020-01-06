@@ -1,15 +1,10 @@
-# Julien Aube - 2020
-# mqtt_to_sql
-#
-# This python script subscribes to MQTT broker topic prefix given as a config file
-# and inserts the topic into a PostgreSQL database table.
-# The database name is the first word of the topic, usually in uppercase.
+# mqtt-to-sql
 
+Julien Aube - 2020
 
-# Content
-* [Installation](#installation)
-* [Usage](#usage)
-* [History data](#history-data)
+This python script subscribes to MQTT broker topic prefix given as a config file
+and inserts the topic into a PostgreSQL database table.
+The database name is the first word of the topic, usually in uppercase.
 
 ## Installation
 ### Prerequisite
@@ -57,7 +52,5 @@ CREATE TABLE infos (
 	PRIMARY KEY(time, sensorid)
 );
 SELECT create_hypertable('infos', 'time');
-
 ```
-
 
